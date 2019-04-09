@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BookMyHostel</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="not_registred">Not Registred ?</string>
+    <string name="address">Address</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="name">Name</string>
+    <string name="email_address">Email</string>
+    <string name="passwords">Password</string>
+    <string name="email">Email</string>
+    <string name="buyer">Buyer</string>
+    <string name="saller">Saller</string>
+    <string name="register">Register</string>
+</resources>
