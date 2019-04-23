@@ -43,44 +43,45 @@ public class LoginActivity extends AppCompatActivity {
         relativeLayout = (RelativeLayout)findViewById(R.id.login_activity);
         relativeLayout.setOnClickListener(null);
 
-        email.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (email.getText().toString().isEmpty()){
-                    userlayoutemail.setErrorEnabled(true);
-                    userlayoutemail.setError("Plese enter your Email !");
-                }else {
-                    userlayoutemail.setErrorEnabled(false);
-                }
-            }
-        });
-
-        email.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (email.getText().toString().isEmpty()){
-                    userlayoutemail.setErrorEnabled(true);
-                    userlayoutemail.setError("Plese enter your Email !");
-                }else {
-                    userlayoutemail.setErrorEnabled(false);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
+//        email.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (email.getText().toString().isEmpty()){
+//                    userlayoutemail.setErrorEnabled(true);
+//                    userlayoutemail.setError("Plese enter your Email !");
+//                }else {
+//                    userlayoutemail.setErrorEnabled(false);
+//                }
+//            }
+//        });
+//
+//        email.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                if (email.getText().toString().isEmpty()){
+//                    userlayoutemail.setErrorEnabled(true);
+//                    userlayoutemail.setError("Plese enter your Email !");
+//                }else {
+//                    userlayoutemail.setErrorEnabled(false);
+//                }
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LoginActivity.this, "You are Logged In", Toast.LENGTH_SHORT).show();
+                Intent loginIntent = new Intent(LoginActivity.this, HomePage.class);
+                startActivity(loginIntent);
             }
         });
 
@@ -89,7 +90,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent homeintent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(homeintent);
-                finish();
             }
         });
 

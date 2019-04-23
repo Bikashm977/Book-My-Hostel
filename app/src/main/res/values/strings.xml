@@ -9,8 +9,8 @@
     <string name="name">Name</string>
     <string name="email_address">Email</string>
     <string name="passwords">Password</string>
-    <string name="email">Email</string>
     <string name="buyer">Buyer</string>
     <string name="saller">Saller</string>
     <string name="register">Register</string>
+    <string name="email">Email</string>
 </resources>

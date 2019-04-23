@@ -9,20 +9,43 @@
     android:focusable="true"
     android:focusableInTouchMode="true">
 
-    <android.support.v7.widget.Toolbar
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbar_id"
-        android:background="?attr/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar_id"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Scroll_view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/bookmyhostellogo"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/logo"
+        android:layout_marginTop="60dp"
         />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar_id"
+        android:layout_below="@id/logo"
         android:id="@+id/name_textinputlayout"
-        android:layout_marginTop="10dp"
         android:layout_marginRight="32dp"
         android:layout_marginLeft="32dp"
         >
@@ -32,7 +55,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/Name_EditText"
             android:hint="@string/name"
+            android:textStyle="italic"
             android:inputType="textPersonName"
+            android:drawableStart="@drawable/account"
+            android:drawablePadding="10dp"
             />
     </android.support.design.widget.TextInputLayout>
 
@@ -41,7 +67,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/name_textinputlayout"
         android:id="@+id/Email_textinputlayout"
-        android:layout_marginTop="10dp"
         android:layout_marginRight="32dp"
         android:layout_marginLeft="32dp"
         >
@@ -52,6 +77,9 @@
             android:id="@+id/Email_EditText"
             android:inputType="textEmailAddress"
             android:hint="@string/email_address"
+            android:textStyle="italic"
+            android:drawableStart="@drawable/email"
+            android:drawablePadding="10dp"
             />
     </android.support.design.widget.TextInputLayout>
 
@@ -60,9 +88,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Email_textinputlayout"
         android:id="@+id/password_textinputlayout"
-        android:layout_marginTop="10dp"
         android:layout_marginRight="32dp"
         android:layout_marginLeft="32dp"
+        app:passwordToggleEnabled="true"
         >
 
         <android.support.v7.widget.AppCompatEditText
@@ -71,6 +99,10 @@
             android:id="@+id/password_EditText"
             android:hint="@string/passwords"
             android:inputType="textPassword"
+            android:textStyle="italic"
+            android:drawableStart="@drawable/password"
+            android:drawablePadding="10dp"
+
             />
     </android.support.design.widget.TextInputLayout>
 
@@ -79,9 +111,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/password_textinputlayout"
         android:id="@+id/mobile_textinputlayout"
-        android:layout_marginTop="10dp"
         android:layout_marginRight="32dp"
         android:layout_marginLeft="32dp"
+
         >
 
         <android.support.v7.widget.AppCompatEditText
@@ -90,6 +122,9 @@
             android:id="@+id/Mobile_EditText"
             android:hint="@string/mobile_no"
             android:inputType="phone"
+            android:textStyle="italic"
+            android:drawableStart="@drawable/phone"
+            android:drawablePadding="10dp"
             />
     </android.support.design.widget.TextInputLayout>
 
@@ -98,9 +133,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/mobile_textinputlayout"
         android:id="@+id/address_textinputlayout"
-        android:layout_marginTop="10dp"
         android:layout_marginRight="32dp"
         android:layout_marginLeft="32dp"
+
         >
 
         <android.support.v7.widget.AppCompatEditText
@@ -109,6 +144,9 @@
             android:id="@+id/Address_EditText"
             android:hint="@string/address"
             android:inputType="textPersonName"
+            android:textStyle="italic"
+            android:drawableStart="@drawable/home"
+            android:drawablePadding="10dp"
             />
     </android.support.design.widget.TextInputLayout>
 
@@ -120,7 +158,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginRight="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="10dp"
         android:id="@+id/radio_layout">
 
         <RadioGroup
@@ -134,12 +171,14 @@
                 android:hint="@string/buyer"
                 android:layout_marginRight="5dp"
                 android:id="@+id/Buyer_Radio"
+                android:textStyle="italic"
                 />
             <android.support.v7.widget.AppCompatRadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/saller"
                 android:id="@+id/Saller_Radio"
+                android:textStyle="italic"
                 />
         </RadioGroup>
     </android.support.v7.widget.LinearLayoutCompat>
@@ -152,11 +191,15 @@
         android:layout_marginRight="32dp"
         android:layout_marginTop="10dp"
         android:id="@+id/btn_Register"
-        android:text="@string/register"
-        style="@style/Button"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/button"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="60dp"
         />
-
-
+        </RelativeLayout>
+    </ScrollView>
 
 
 </RelativeLayout>

@@ -42,107 +42,107 @@ public class RegisterActivity extends AppCompatActivity {
         relativeLayout = (RelativeLayout)findViewById(R.id.Register_Activity);
         relativeLayout.setOnClickListener(null);
 
-        name.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (name.getText().toString().isEmpty()){
-                    namelayout.setErrorEnabled(true);
-                    namelayout.setError("Plese enter your Name !");
-                }else {
-                    namelayout.setErrorEnabled(false);
-                }
-            }
-        });
-
-        name.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (name.getText().toString().isEmpty()){
-                    namelayout.setErrorEnabled(true);
-                    namelayout.setError("Plese enter your Name !");
-                }else {
-                    namelayout.setErrorEnabled(false);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mobile.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (mobile.getText().toString().isEmpty()){
-                    mobilelayout.setErrorEnabled(true);
-                    mobilelayout.setError("Plese enter your Mobile No !");
-                }else {
-                    mobilelayout.setErrorEnabled(false);
-                }
-            }
-        });
-
-        mobile.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (mobile.getText().toString().isEmpty()){
-                    mobilelayout.setErrorEnabled(true);
-                    mobilelayout.setError("Plese enter your Mobile No !");
-                }else {
-                    mobilelayout.setErrorEnabled(false);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        address.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (address.getText().toString().isEmpty()){
-                    addresslayout.setErrorEnabled(true);
-                    addresslayout.setError("Plese enter your Address !");
-                }else {
-                    addresslayout.setErrorEnabled(false);
-                }
-            }
-        });
-
-        address.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (address.getText().toString().isEmpty()){
-                    addresslayout.setErrorEnabled(true);
-                    addresslayout.setError("Plese enter your Address !");
-                }else {
-                    addresslayout.setErrorEnabled(false);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
+//        name.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (name.getText().toString().isEmpty()){
+//                    namelayout.setErrorEnabled(true);
+//                    namelayout.setError("Plese enter your Name !");
+//                }else {
+//                    namelayout.setErrorEnabled(false);
+//                }
+//            }
+//        });
+//
+//        name.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                if (name.getText().toString().isEmpty()){
+//                    namelayout.setErrorEnabled(true);
+//                    namelayout.setError("Plese enter your Name !");
+//                }else {
+//                    namelayout.setErrorEnabled(false);
+//                }
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//        });
+//
+//        mobile.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (mobile.getText().toString().isEmpty()){
+//                    mobilelayout.setErrorEnabled(true);
+//                    mobilelayout.setError("Plese enter your Mobile No !");
+//                }else {
+//                    mobilelayout.setErrorEnabled(false);
+//                }
+//            }
+//        });
+//
+//        mobile.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                if (mobile.getText().toString().isEmpty()){
+//                    mobilelayout.setErrorEnabled(true);
+//                    mobilelayout.setError("Plese enter your Mobile No !");
+//                }else {
+//                    mobilelayout.setErrorEnabled(false);
+//                }
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//        });
+//
+//        address.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (address.getText().toString().isEmpty()){
+//                    addresslayout.setErrorEnabled(true);
+//                    addresslayout.setError("Plese enter your Address !");
+//                }else {
+//                    addresslayout.setErrorEnabled(false);
+//                }
+//            }
+//        });
+//
+//        address.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                if (address.getText().toString().isEmpty()){
+//                    addresslayout.setErrorEnabled(true);
+//                    addresslayout.setError("Plese enter your Address !");
+//                }else {
+//                    addresslayout.setErrorEnabled(false);
+//                }
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//        });
 
     }
 
@@ -154,7 +154,6 @@ public class RegisterActivity extends AppCompatActivity {
         if (id==android.R.id.home){
             Intent homeintent = new Intent(RegisterActivity.this, LoginActivity.class);
             startActivity(homeintent);
-            finish();
         }
         return super.onOptionsItemSelected(item);
     }
