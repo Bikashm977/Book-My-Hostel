@@ -24,7 +24,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nav_drawer);
+        setContentView(R.layout.activity_home_page);
 
         toolbar = findViewById(R.id.toolbar_id);
         setSupportActionBar(toolbar);
@@ -36,8 +36,16 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         drawerLayout.setDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView.setNavigationItemSelectedListener(this);
+        if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new Hostel_fragment()).commit();
+            navigationView.setCheckedItem(R.id.hostel_id);
+        }
 
+
+
+
+        navigationView.setNavigationItemSelectedListener(this);
         materialSearchView = (MaterialSearchView)findViewById(R.id.search_view);
 
     }
@@ -87,14 +95,15 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         int id = menuItem.getItemId();
         switch (id){
             case R.id.profile_id1:
-                Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new Profile_fragment()).commit();
                 break;
             case R.id.hostel_id:
-                Toast.makeText(this, "Hostels", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new Hostel_fragment()).commit();
                 break;
             case R.id.bookmark_id:
-                Intent homeintent = new Intent(HomePage.this, Bookmark.class);
-                startActivity(homeintent);
+                Toast.makeText(this, "bookmark", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.chanegPassword_id:
                 Toast.makeText(this, "Change Password", Toast.LENGTH_SHORT).show();
