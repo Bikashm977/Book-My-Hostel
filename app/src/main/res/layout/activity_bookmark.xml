@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePage">
-
+    tools:context=".Bookmark">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -24,15 +23,12 @@
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
         />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello world"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
-
-
-
-
+        android:text="Bookmark"/>
 
 </RelativeLayout>
